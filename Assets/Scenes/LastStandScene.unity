@@ -988,6 +988,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1013,7 +1014,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1054,13 +1055,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.93, y: -11.28, z: -10}
+  m_LocalPosition: {x: 43.93, y: -14.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6569a0a72ac37c64f84e65dbe8e78901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 630679243}
+  MinPos: {x: 17.09, y: -52.94}
+  MaxPos: {x: 68.91, y: -10.93}
+  Speed: 3
 --- !u!1 &544733455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1178,7 @@ GameObject:
   - component: {fileID: 630679245}
   - component: {fileID: 630679247}
   - component: {fileID: 630679248}
+  - component: {fileID: 630679249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1228,7 +1246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630679241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.23, y: -18.38, z: 0}
+  m_LocalPosition: {x: 43.95, y: -14.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1308,8 +1326,8 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &630679247
 Animator:
@@ -1427,6 +1445,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &630679249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630679241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6364e6aa8059846812e069c9a8f51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State: 0
+  IsAlive: 1
+  HealthPoint: 200
+  MagicPoint: 0
+  StaminaPoint: 0
+  MoveSpeed: 5
+  AttackSpeed: 0.5
 --- !u!1 &711371767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735588767}
   - component: {fileID: 1735588768}
+  - component: {fileID: 1735588769}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Untagged
@@ -2382,10 +2420,10 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735588766}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: efba313c9f7ac354c95c96f829e8681f, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -2412,6 +2450,18 @@ PlayableDirector:
     value: {fileID: 630679248}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &1735588769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735588766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c38998593ffdb458f882358e59c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1840595990
 GameObject:
   m_ObjectHideFlags: 0
@@ -77442,9 +77492,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 370163375
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
