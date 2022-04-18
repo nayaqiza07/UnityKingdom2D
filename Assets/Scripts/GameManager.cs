@@ -2,8 +2,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Origin_DamagedCreep => Resources.Load<GameObject>("Prefabs/Enemies/DamagedCreep");
+    public GameObject Origin_NativeCreep => Resources.Load<GameObject>("Prefabs/Enemies/NativeCreep");
+    public GameObject Origin_WarriorCreep => Resources.Load<GameObject>("Prefabs/Enemies/WarriorCreep");
+    public GameObject Origin_WitchCreep => Resources.Load<GameObject>("Prefabs/Enemies/WitchCreep");
     public GameObject Origin_SkeltCreep => Resources.Load<GameObject>("Prefabs/Enemies/SkeltCreep");
     public GameObject Origin_CastLight => Resources.Load<GameObject>("Prefabs/Stuffs/CastLight");
+    public GameObject Origin_Fire1 => Resources.Load<GameObject>("Prefabs/Stuffs/Fire_Style1");
+    public GameObject Origin_Fire2 => Resources.Load<GameObject>("Prefabs/Stuffs/Fire_Style2");
+    public GameObject Origin_Shell => Resources.Load<GameObject>("Prefabs/Stuffs/ShellEffect");
+
+    public int GamePoint;
+    public int KillPoint;
 
     public static GameManager Instance { get; private set; }
 
@@ -21,4 +31,9 @@ public enum UnitState
 public enum EnemySet
 {
     Default, Damaged, Native, Warrior, Witch, Skeleton,
+}
+
+public enum SkillSet
+{
+    Default, SplashSwing, DemonShell,
 }
