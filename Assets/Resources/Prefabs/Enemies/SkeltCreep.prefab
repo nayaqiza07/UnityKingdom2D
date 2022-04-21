@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoint: 15
+  HitArea: 0
 --- !u!1 &4337629221287016470
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 4337629221287016478}
   m_Layer: 0
   m_Name: SkeltCreep
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoint: 15
+  HitArea: 0
 --- !u!1 &4337629222546834850
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoint: 15
+  HitArea: 0
 --- !u!1 &4337629223126025530
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,3 +594,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoint: 15
+  HitArea: 0

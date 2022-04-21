@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject Origin_Fire1 => Resources.Load<GameObject>("Prefabs/Stuffs/Fire_Style1");
     public GameObject Origin_Fire2 => Resources.Load<GameObject>("Prefabs/Stuffs/Fire_Style2");
     public GameObject Origin_Shell => Resources.Load<GameObject>("Prefabs/Stuffs/ShellEffect");
+    public GameObject Origin_Damage => Resources.Load<GameObject>("Prefabs/Stuffs/DamagePop");
 
     public int GamePoint;
     public int KillPoint;
@@ -26,6 +27,13 @@ public class GameManager : MonoBehaviour
 public enum UnitState
 {
     Idle, Move, Attack, Cast, Dead,
+}
+
+public enum DamageState
+{
+    Default, 
+    PlayerPhs, PlayerMag, 
+    EnemyPhs, AllyHeal,
 }
 
 public enum EnemySet
