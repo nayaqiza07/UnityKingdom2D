@@ -152,6 +152,10 @@ public class PlayerActive : MonoBehaviour
                     var effect = Instantiate(gm.Origin_CastLight, transform);
                     Destroy(effect, 1f);
 
+                    DamageActive.PopupDamage(gm.Origin_Damage,
+                                             transform.position, 100,
+                                             DamageState.AllyHeal);
+
                     HealthPoint.CurrentPoint += 100;
                     if (HealthPoint.CurrentPoint > HealthPoint.MaximumPoint)
                     {
