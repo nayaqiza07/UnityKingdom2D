@@ -33,7 +33,7 @@ public class HitHandler : MonoBehaviour
                                              AttackPoint, 
                                              DamageState.PlayerPhs);
                     var player = transform.parent.parent.GetComponent<PlayerActive>();
-                    player.StaminaPoint.CurrentPoint += 10;
+                    player.StaminaPoint.CurrentProp += 10;
                 }
                 count++;
             }
