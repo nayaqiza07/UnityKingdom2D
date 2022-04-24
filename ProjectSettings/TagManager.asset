@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Nest
+  - Hole
+  - Map
   layers:
   - Default
   - TransparentFX
